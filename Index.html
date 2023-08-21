@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>repl.it</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script></script>
+<div style="width: 700px">
+    <canvas id="myChart"></canvas>
+</div>
+<canvas id="myChart"></canvas>
+<script>
+    var ctx = document.getElementById('myChart')
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Switch', 'Xbox', 'Playstation', 'Wii', 'PC'],
+            datasets: [{
+                label: '# of Votes',
+                data: [2, 2, 3, 8, 8],
+                backgroundColor: [
+                    'rgb(0,255,234)',
+                    'rgba(20,255,0,0.6)',
+                    'rgba(15,154,213,0.6)',
+                    'rgba(0,0,0,0.6)',
+                    'rgb(255,126,0)'
+                ],
+                borderColor: [
+                    'rgb(255,0,0)',
+                    'rgb(0,0,0)',
+                    'rgb(65,58,58)',
+                    'rgb(197,187,177)',
+                    'rgb(255,126,0)'
+                ],
+                borderWidth: 3
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
