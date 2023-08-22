@@ -8,10 +8,81 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
           integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous"
           referrerpolicy="no-referrer"></script>
+    <div style="width: 300px">
     <canvas id="myChart"></canvas>
+    </div>
     <script>
       var ctx = document.getElementById('myChart')
-      var myChart = new Chart(ctx, { })
+      var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Red', 'Blue', 'Yellow', 'Orange', 'Purple', 'Black'],
+          datasets:[{
+            label: 'People Favorite Colour',
+            data:[3, 7, 5, 4, 8, 2],
+            backgroundColor:[
+              'rgb(255,0,0)',
+              'rgb(10,124,231)',
+              'rgb(236,165,12)',
+              'rgb(255,126,0)',
+              'rgb(182,0,255)',
+              'rgb(0,0,0)'
+            ],
+            hoverOffset: 1
+          }]
+        }
+      });
     </script>
+  <div style="width: 300px">
+  <canvas id="myChart2"></canvas>
+  </div>
+  <script>
+    var cty = document.getElementById('myChart2')
+    var myChart = new Chart(cty, {
+      type: 'pie',
+      data: {
+        labels: ['Action', 'Horror', 'Mystery', 'Fiction', 'Science-Fiction', 'Novel'],
+        datasets:[{
+          label: 'Genres Most Liked',
+          data:[4, 5, 3, 6, 4, 8],
+          backgroundColor:[
+            'rgb(255,0,0)',
+            'rgb(0,134,255)',
+            'rgb(255,174,0)',
+            'rgb(255,126,0)',
+            'rgb(182,0,255)',
+            'rgb(0,0,0)'
+          ],
+          hoverOffset: 1
+        }]
+      }
+    });
+  </script>
+  <div style="width: 300px">
+    <canvas id="myChart3"></canvas>
+  </div>
+  <script>
+    var ctz = document.getElementById('myChart3')
+    var myChart = new Chart(ctz, {
+      type: 'polarArea',
+      data: {
+        labels: ['Goomba', 'Koopa Troopa', 'Bowser', 'Bowser Jr', 'Lemmy', 'Boom Boom', 'Boo', 'Blue Turtle'],
+        datasets:[{
+          label: 'Favorite Mario Enemy',
+          data:[1, 10, 9, 3, 2, 6, 2, 11],
+          backgroundColor:[
+            'rgba(157,47,0,0.6)',
+            'rgb(0,255,41)',
+            'rgb(0,0,0)',
+            'rgb(255,0,0)',
+            'rgba(20,255,0,0.6)',
+            'rgb(255,126,0)',
+            'rgba(192,173,173,0.6)',
+            'rgb(0,143,255)'
+          ],
+        }]
+      }
+    });
+  </script>
   </body>
   </html>
