@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+        integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style="width: 700px">
+<canvas id='myChart'></canvas>
+</div>
+<script>
+  var ctx = document.getElementById('myChart')
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+        data:[17.20, 18.40, 22.10, 20.60, 14.40, 19.40, 30.40, 26.00, 26.20, 31.00, 41.50, 56.60, 66.00, 72.30, 99.70, 62, 79.50, 94.9, 94.1, 98, 93.2, 48.7, 43.3, 50.8, 65.2, 57, 39.7, 68.2, 94.5, 75.7],
+        label:'Prices',
+        borderColor: 'rgb(255,0,0)'
+      }]
+    },
+    options:{
+      plugins:{
+        title: {
+          display: true,
+          text: 'Yearly Spending'
+        },
+        legend: {
+          position: 'left'
+        }
+      }
+    }
+  });
+</script>
+<div style="width: 600px">
+  <canvas id="myChart2"></canvas>
+</div>
+<script>
+  var cty = document.getElementById('myChart2')
+  var myChart2 = new Chart(cty, {
+    type: 'doughnut',
+    data: {
+      labels: ['1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets:[{
+        label: 'People Favorite Colour',
+        data:[17.20, 18.40, 22.10, 20.60, 14.40, 19.40, 30.40, 26.00, 26.20, 31.00, 41.50, 56.60, 66.00, 72.30, 99.70, 62, 79.50, 94.9, 94.1, 98, 93.2, 48.7, 43.3, 50.8, 65.2, 57, 39.7, 68.2, 94.5, 75.7],
+        backgroundColor:[
+          'rgb(255,0,0)',
+          'rgb(10,124,231)',
+          'rgb(236,165,12)',
+          'rgb(255,126,0)',
+          'rgb(182,0,255)',
+          'rgb(0,0,0)',
+          'rgb(10,238,26)',
+          'rgba(210,61,0,0.6)',
+          'rgb(0,255,234)'
+        ],
+        hoverOffset: 1
+      }]
+    }
+  });
+</script>
+<div style="width: 700px">
+  <canvas id="myChart3"></canvas>
+</div>
+<canvas id="myChart3"></canvas>
+<script>
+  var ctz = document.getElementById('myChart3')
+  var myChart3 = new Chart(ctz, {
+    type: 'bar',
+    data: {
+      labels: ['1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+      datasets: [{
+        label: '# of Votes',
+        data: [17.20, 18.40, 22.10, 20.60, 14.40, 19.40, 30.40, 26.00, 26.20, 31.00, 41.50, 56.60, 66.00, 72.30, 99.70, 62, 79.50, 94.9, 94.1, 98, 93.2, 48.7, 43.3, 50.8, 65.2, 57, 39.7, 68.2, 94.5, 75.7],
+        backgroundColor: [
+          'rgb(0,255,234)',
+          'rgb(0,0,0)',
+          'rgb(10,238,26)',
+          'rgb(227,5,5)',
+          'rgb(255,126,0)'
+        ],
+        borderColor: [
+          'rgb(0,255,234)',
+          'rgb(0,0,0)',
+          'rgb(10,238,26)',
+          'rgb(227,5,5)',
+          'rgb(255,126,0)'
+        ],
+        borderWidth: 3
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>
